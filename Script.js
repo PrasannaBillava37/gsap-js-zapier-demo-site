@@ -1,5 +1,26 @@
 
-//alert("Sorry for the inconvenience. This site is currently optimized for laptops and desktops only.");
+alert("Sorry for the inconvenience. This site is currently optimized for laptops and desktops only.");
+
+document.querySelector(".contact-form").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent page refresh
+
+    const form = event.target;
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+      method: "POST",
+      body: formData
+    })
+    .then(() => {
+      // ✅ Show a thank-you popup (or redirect instead)
+      alert("Thank you! Your message has been sent.");
+      // OR redirect:
+      // window.location.href = "thankyou.html";
+    })
+    .catch(() => {
+      alert("Oops! Something went wrong.");
+    });
+  });
 
 
 //scroll cursor animation 
