@@ -1,6 +1,13 @@
 
-alert("Sorry for the inconvenience. This site is currently optimized for laptops and desktops only.");
+//code for hamburger menu
+const hamburger = document.getElementById('hamburger');
+    const navlink = document.getElementById('navlink');
 
+    hamburger.addEventListener('click', () => {
+      navlink.classList.toggle('active');
+    });
+
+//code for form need to avoid zapier API success page show
 document.querySelector(".contact-form").addEventListener("submit", function(event) {
     event.preventDefault(); // Prevent page refresh
 
@@ -23,13 +30,11 @@ document.querySelector(".contact-form").addEventListener("submit", function(even
   });
 
 
-//scroll cursor animation 
+// Gsap code for scroll cursor animation 
 let main=document.querySelector(".main")
 let cursor=document.querySelector("#cursor")
 let point =document.getElementById("point")
 let point_01=document.getElementById("point_01")
-
-
 main.addEventListener("mousemove",function(dets){
   gsap.to(cursor,{
     x:dets.x,
@@ -63,7 +68,7 @@ point_01.addEventListener("mouseleave",function(){
 })
 
 
-// Navbar animation
+// GSAP code for Navbar animation(scramble-text)
 gsap.from(".scramble-link", {
   y: 10,
   opacity: 0,
@@ -71,7 +76,7 @@ gsap.from(".scramble-link", {
 });
 
 
-// HeroButton animation
+// GSAP HeroButton animation
 gsap.from("#buttonholder", {
   y: 40,
   opacity: 0,
@@ -81,7 +86,7 @@ gsap.from("#buttonholder", {
 
 
 
-//Hero content div  animation
+//GSAP Hero content div  animation
 document.fonts.ready.then(() => {
   gsap.set(".Hero_content", { opacity: 1 });
 
@@ -98,7 +103,7 @@ document.fonts.ready.then(() => {
   });
 });
 
-//Certificate scrolltriger animation
+//GSAP Certificate scrolltriger animation only for laptop viewport
  gsap.registerPlugin(ScrollTrigger);
 
     const container = document.querySelector("#certificate_holder");
@@ -116,7 +121,4 @@ document.fonts.ready.then(() => {
       }
     });
 
-// svg animation for scroll indicator
-
-//view cursor animation 
 
