@@ -114,12 +114,13 @@ document.fonts.ready.then(() => {
       ease: "power2.out",
       scrollTrigger: {
         trigger: "#section-certificate",
-        start: "top top",
-        end: "+=" + scrollLength,
+        start: "top 0%",
+        end: "bottom 10%",
         scrub:2,
         pin: true,
       }
     });
+
 
 
 
