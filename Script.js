@@ -106,7 +106,7 @@ document.fonts.ready.then(() => {
 //GSAP Certificate scrolltriger animation only for laptop viewport
  gsap.registerPlugin(ScrollTrigger);
 
-    const container = document.querySelector("#section-certificate");
+    const container = document.getElementById("#section-certificate #certificate_holder");
     const scrollLength = container.scrollWidth - window.innerWidth;
 
     gsap.to(container, {
@@ -120,6 +120,7 @@ document.fonts.ready.then(() => {
         pin: true,
       }
     });
+
 
 
 
