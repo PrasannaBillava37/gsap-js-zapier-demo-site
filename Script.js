@@ -111,7 +111,7 @@ document.fonts.ready.then(() => {
 
     gsap.to(container, {
       x: -scrollLength,
-      ease: "none",
+      ease: "power2.out",
       scrollTrigger: {
         trigger: "#section-certificate",
         start: "top top",
@@ -120,5 +120,6 @@ document.fonts.ready.then(() => {
         pin: true,
       }
     });
+
 
 
